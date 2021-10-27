@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiap Filmes</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!--Se eu quiser o icone em outras páginas vou ter que colocar a mesma linha nas outras paginas-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Fiap Filmes</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html" class="ativo">Filmes</a></li>
+                <li><a href="home.html" class="ativo">Séries</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="hero">
+        <p>Encontre rapidamente o que assistir</p>
+    </div>
+
+    <main>
+        <section>
+            <h2>Filmes em alta</h2>
+            <div class="lista-de-filmes" id="filmes"></div>
+        </section>
+
+
+        <section>
+            <h2>Séries em alta</h2>
+            <div class="lista-de-series" id="series"></div>
+        </section>
+
+    </main>
+
+
+</body>
+
+<script src="./JS/dados.js"></script>
+<script src="./JS/CardFilme.js"></script>
+<script src="./JS/script.js"></script>
+
+</html>

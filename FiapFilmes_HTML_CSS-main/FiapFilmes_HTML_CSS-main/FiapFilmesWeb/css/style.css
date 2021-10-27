@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;700&display=swap');
+
+:root{
+    --bg: #212121;
+    --bg2: #3c3c3c;
+    --primary: #f06;
+    --base: #fff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    color: var(--base);
+}
+
+body{
+    background-color: var(--bg);
+    font-family: 'roboto', sans-serif;
+}
+
+header{
+    background-color: var(--bg2);
+    display: flex;
+}
+
+header h1{
+    color: var(--primary);
+    font-family: 'bebas neue', sans-serif;
+    font-size: 4rem;
+    margin-left: 4rem;
+    padding-top: 1rem;
+}
+
+header nav{
+    flex-grow: 1;
+    display: flex;
+    padding-bottom: 1rem;
+}
+
+header ul{
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+nav li:last-child{
+    flex: 1;
+    text-align: end;
+}
+
+nav a:hover{
+    color: var(--primary);
+}
+
+nav .ativo{
+    border-bottom: var(--primary) 3px solid;
+    padding: .5rem;
+}
+
+li{
+    list-style: none;
+    margin: 0 2rem;
+}
+
+a{
+    text-decoration: none;
+}
+
+#hero{
+    position: relative;
+    height: 18rem;
+}
+
+/*pseudo-elemento = não existe no HTML*/
+#hero::before{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: url(../assets/images/poster_guerra.jpg) center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position-y: 30%;
+    filter: opacity(.4);
+    z-index:-1;
+    box-shadow: inset 0px -100px 100px var(--bg);
+}
+
+#hero p {
+    width: 60%;
+    padding: 5rem 4rem;
+    font-weight: bold;
+    font-size: 3rem;
+    text-shadow: .25rem .25rem .25rem rgba(0, 0, 0, 0.25);
+}
+
+main{
+    margin: 0 4rem;
+}
+
+section h2{
+    font-size: 1.5rem;
+    border-left: var(--primary) solid 5px;
+    line-height: 20px;
+    padding-left: .2rem;
+    margin-bottom: 1rem;
+}
+
+.lista-de-filmes{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.filme{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: .5rem;
+}
+
+.filme *{
+    margin: .3rem 0;
+}
+
+.filme .titulo {
+    font-size: 1.5rem;
+}
+
+.poster{
+    width: 190px;
+    border-radius: 5px;
+}
+
+.filme .valor-nota {
+    filter: opacity(.6);
+    line-height: 24px;
+}
+
+.nota{
+    display: flex;
+    justify-content: center;
+}
+
+.nota span{
+    font-size: 1rem;
+    align-self: center;
+    margin-left: .3rem;
+}
+
+.dourado{
+    color: gold;
+}
+
+.botao{
+    background-color: var(--primary);
+    border-radius: 5px;
+    width: 100%;
+    text-align: center;
+    padding: .5rem 0;
+    transition: filter .2s ease-in-out;
+}
+
+.botao:hover{
+    filter: drop-shadow(0px 0px 4px var(--primary))
+            drop-shadow(0px 0px 9px var(--primary));
+}
+
+@media(max-width: 768px){
+    header{
+        flex-direction: column;
+    }
+
+    header h1{
+        margin-left: 2rem;
+    }
+}
+@media(max-width: 588px){
+    #hero p{
+        padding: 1rem;
+    }
+}
+
+
+
+
+
+
